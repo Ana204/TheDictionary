@@ -25,7 +25,6 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
         val navController = requireActivity().findNavController(R.id.nav_host_fragment_activity_main)
 
@@ -41,6 +40,11 @@ class HomeFragment : Fragment() {
             navController.navigate(R.id.action_navigation_home_to_historicFragment)
         }
 
-        return root
+        //val textView: TextView = binding.textHome
+        homeViewModel.text.observe(viewLifecycleOwner) {
+            //textView.text = it
+        }
+
+        return binding.root
     }
 }
