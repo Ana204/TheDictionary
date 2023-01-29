@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import br.com.mobile.thedictionary.R
 import br.com.mobile.thedictionary.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -24,15 +27,20 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
-    }
+        val navController = requireActivity().findNavController(R.id.nav_host_fragment_activity_main)
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null!!
+        binding.buttonList.setOnClickListener {
+            navController.navigate(R.id.action_navigation_home_to_wordListFragment)
+        }
+
+        binding.buttonFavorites.setOnClickListener {
+            navController.navigate(R.id.action_navigation_home_to_favoritesFragment)
+        }
+
+        binding.buttonHistoric.setOnClickListener {
+            navController.navigate(R.id.action_navigation_home_to_historicFragment)
+        }
+
+        return root
     }
 }
