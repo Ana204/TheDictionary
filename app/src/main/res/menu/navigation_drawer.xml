@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/main_item"
+        android:title="search"
+        >
+        <menu>
+
+            <item
+                android:id="@+id/search_item"
+                android:icon="@mipmap/ic_launcher"
+                android:title="search - title"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+
+        </menu>
+    </item>
+
+    <item android:id="@+id/home_item"
+        android:title="email"
+        >
+        <menu>
+            <item
+                android:id="@+id/indox_item"
+                android:icon="@mipmap/ic_launcher_round"
+                android:title="inbox"
+                android:checkable="true"
+                />
+            <item
+                android:id="@+id/outbox_item"
+                android:icon="@mipmap/ic_launcher_round"
+                android:title="outbox"
+                android:checkable="true"
+                />
+
+            <item
+                android:id="@+id/favourites_item"
+                android:icon="@mipmap/ic_launcher_round"
+                android:title="favourites"
+                android:checkable="true"
+                />
+        </menu>
+
+    </item>
+
+    <item android:id="@+id/labels_item"
+        android:title="labels">
+
+        <menu>
+            <item
+                android:id="@+id/label_one"
+                android:icon="@mipmap/ic_launcher"
+                android:title="label one"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+            <item
+                android:id="@+id/label_two"
+                android:icon="@mipmap/ic_launcher"
+                android:title="label one"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+            <item
+                android:id="@+id/label_three"
+                android:icon="@mipmap/ic_launcher"
+                android:title="label one"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+        </menu>
+    </item>
+</menu>
