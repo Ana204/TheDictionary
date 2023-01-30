@@ -14,6 +14,7 @@
                 android:background="@color/teal_200"
                 app:showAsAction="ifRoom"
                 app:itemTextColor="@color/white"
+                app:itemShapeFillColor="?attr/colorSecondaryContainer"
                 />
 
             <item

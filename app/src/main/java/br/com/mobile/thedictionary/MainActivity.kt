@@ -16,5 +16,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val appToBar = binding.includeToBar.appToBar
+        val navigationViewSelect = binding.navigationView
+
+        appToBar.setOnClickListener {
+            binding.drawerLayout.open()
+        }
+
+        navigationViewSelect.setNavigationItemSelectedListener { menuItem ->
+         menuItem.isChecked = true
+            binding.drawerLayout.close()
+            true
+        }
     }
 }

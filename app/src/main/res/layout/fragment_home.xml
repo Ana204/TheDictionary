@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start">
+    >
+
+   <!-- <include
+        android:id="@+id/includeToolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <include
-            android:id="@+id/includeToolbar"
-            layout="@layout/toolbar"
-            />
 
-<!--        <Button
+        <Button
             android:id="@+id/buttonList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,19 +48,20 @@
             android:text="Lista de historicos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonFavorites" />-->
+            app:layout_constraintTop_toBottomOf="@id/buttonFavorites" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.navigation.NavigationView
+   <!-- <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:headerLayout="@layout/header_nav_drawer"
         android:layout_gravity="start"
+        style="@style/Widget.App.NavigationView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation_drawer" />
+        app:menu="@menu/navigation_drawer" />-->
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

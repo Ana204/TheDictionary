@@ -27,19 +27,14 @@ class HomeFragment : Fragment() {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        val navController = requireActivity().findNavController(R.id.nav_host_fragment_activity_main)
 
-        val appToBar = binding.includeToolbar.appToBar
+        val navController = requireActivity().findNavController(R.id.nav_host_fragment_content_main)
 
-        appToBar.setOnClickListener{
-            binding.drawerLayout.open()
-        }
-
-/*        binding.buttonList.setOnClickListener {
+        binding.buttonList.setOnClickListener {
             navController.navigate(R.id.action_navigation_home_to_wordListFragment)
         }
 
-        binding.buttonFavorites.setOnClickListener {
+/*         binding.buttonFavorites.setOnClickListener {
             navController.navigate(R.id.action_navigation_home_to_favoritesFragment)
         }
 
