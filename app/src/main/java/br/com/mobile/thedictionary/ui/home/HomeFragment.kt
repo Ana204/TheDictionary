@@ -21,6 +21,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -28,7 +29,13 @@ class HomeFragment : Fragment() {
 
         val navController = requireActivity().findNavController(R.id.nav_host_fragment_activity_main)
 
-        binding.buttonList.setOnClickListener {
+        val appToBar = binding.includeToolbar.appToBar
+
+        appToBar.setOnClickListener{
+            binding.drawerLayout.open()
+        }
+
+/*        binding.buttonList.setOnClickListener {
             navController.navigate(R.id.action_navigation_home_to_wordListFragment)
         }
 
@@ -38,7 +45,7 @@ class HomeFragment : Fragment() {
 
         binding.buttonHistoric.setOnClickListener {
             navController.navigate(R.id.action_navigation_home_to_historicFragment)
-        }
+        }*/
 
         //val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {

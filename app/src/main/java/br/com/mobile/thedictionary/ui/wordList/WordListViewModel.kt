@@ -3,25 +3,31 @@ package br.com.mobile.thedictionary.ui.wordList
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.com.mobile.thedictionary.model.WordListModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class WordListViewModel @Inject constructor() : ViewModel() {
 
-    private lateinit var wordlList: ArrayList<String>
+    var TAG = "WordListViewModel"
+    private lateinit var wordList: ArrayList<WordListModel>
+    var mutableListWord: MutableLiveData<ArrayList<WordListModel>> = MutableLiveData()
 
-    fun addWordList(): ArrayList<String> {
 
-        wordlList = ArrayList()
+    fun addWordList(): ArrayList<WordListModel> {
 
-        wordlList.add("Hello")
-        wordlList.add("HI")
-        wordlList.add("By")
+        wordList = ArrayList<WordListModel>()
 
-        Log.e("LIST WORD ", wordlList.toString())
+        wordList.add(WordListModel("Good"))
+        wordList.add(WordListModel("HI"))
+        wordList.add(WordListModel("By"))
 
-        return wordlList
+        Log.e("LIST WORD ", wordList.toString())
+
+        mutableListWord.postValue(wordList)
+
+        return wordList
     }
 }
 
