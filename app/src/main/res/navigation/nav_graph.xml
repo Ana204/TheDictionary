@@ -24,7 +24,11 @@
         android:id="@+id/wordListFragment"
         android:name="br.com.mobile.thedictionary.ui.wordList.WordListFragment"
         android:label="fragment_word_list"
-        tools:layout="@layout/fragment_word_list" />
+        tools:layout="@layout/fragment_word_list" >
+        <action
+            android:id="@+id/action_wordListFragment_to_wordDetailsFragment"
+            app:destination="@id/wordDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="br.com.mobile.thedictionary.ui.favorites.FavoritesFragment"
@@ -35,4 +39,9 @@
         android:name="br.com.mobile.thedictionary.ui.historic.HistoricFragment"
         android:label="fragment_historic"
         tools:layout="@layout/fragment_historic" />
+    <fragment
+        android:id="@+id/wordDetailsFragment"
+        android:name="br.com.mobile.thedictionary.ui.wordDetails.WordDetailsFragment"
+        android:label="fragment_word_details"
+        tools:layout="@layout/fragment_word_details" />
 </navigation>

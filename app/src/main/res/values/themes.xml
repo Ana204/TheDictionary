@@ -19,4 +19,11 @@
         <item name="itemTextColor">@color/navigation_item_color</item>
         <item name="itemShapeFillColor">@color/navigation_item_background_color</item>
     </style>
+
+    <style name="defaultMargin">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
 </resources>
