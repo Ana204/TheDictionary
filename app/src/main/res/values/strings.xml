@@ -7,4 +7,7 @@
     <string name="fragment_word_list_textViewTitle">List of words</string>
     <string name="fragment_word_details_textViewDesc">click to hear the sound of the word</string>
     <string name="fragment_word_details_textViewdesc_meanings">Meanings</string>
+    <string name="fragment_home_text_view_desc_word">Discover the world of words</string>
+    <string name="fragment_home_textView_title_favorite">See your favorite words</string>
+    <string name="fragment_home_textView_desc_historic">Words you\'ve seen before</string>
 </resources>

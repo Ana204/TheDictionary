@@ -34,13 +34,13 @@ class HomeFragment : Fragment() {
             navController.navigate(R.id.action_navigation_home_to_wordListFragment)
         }
 
-/*         binding.buttonFavorites.setOnClickListener {
+         binding.buttonFavorites.setOnClickListener {
             navController.navigate(R.id.action_navigation_home_to_favoritesFragment)
         }
 
         binding.buttonHistoric.setOnClickListener {
             navController.navigate(R.id.action_navigation_home_to_historicFragment)
-        }*/
+        }
 
         //val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
