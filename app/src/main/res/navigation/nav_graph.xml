@@ -42,7 +42,11 @@
         android:id="@+id/historicFragment"
         android:name="br.com.mobile.thedictionary.ui.historic.HistoricFragment"
         android:label="fragment_historic"
-        tools:layout="@layout/fragment_historic" />
+        tools:layout="@layout/fragment_historic" >
+        <action
+            android:id="@+id/action_historicFragment_to_wordDetailsFragment"
+            app:destination="@id/wordDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/wordDetailsFragment"
         android:name="br.com.mobile.thedictionary.ui.wordDetails.WordDetailsFragment"
