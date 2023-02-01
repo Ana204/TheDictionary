@@ -33,7 +33,11 @@
         android:id="@+id/favoritesFragment"
         android:name="br.com.mobile.thedictionary.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_wordDetailsFragment"
+            app:destination="@id/wordDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/historicFragment"
         android:name="br.com.mobile.thedictionary.ui.historic.HistoricFragment"
