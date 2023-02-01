@@ -6,7 +6,6 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,10 +17,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/appToBar"
-            style="@style/Widget.Material3.Toolbar.Surface"
+            style="@style/Widget.Material3.Toolbar.OnSurface"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:navigationIcon="@drawable/ic_view_headline"
             app:title="@string/app_name"
             app:titleCentered="true"
             />
