@@ -4,4 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="arrow_back">arrow back</string>
+    <string name="fragment_word_list_textViewTitle">List of words</string>
+    <string name="fragment_word_details_textViewDesc">click to hear the sound of the word</string>
+    <string name="fragment_word_details_textViewdesc_meanings">Meanings</string>
 </resources>

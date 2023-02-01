@@ -16,29 +16,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_favorite"
-        android:backgroundTint="@color/teal_700"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewInformation"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="18dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        android:elevation="1dp"
+        app:strokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iconArrowBack">
+        app:layout_constraintTop_toBottomOf="@id/iconArrowBack"
+       >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintInfo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="17dp">
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/buttonAddFavorite"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/yellow"
+                android:src="@drawable/ic_favorite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/textViewWord"
@@ -64,14 +68,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textViewWord" />
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonAboutSound"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        app:backgroundTint="@color/purple_100"
+        app:icon="@drawable/audio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardViewInformation" />
 
@@ -79,7 +86,8 @@
         android:id="@+id/textViewInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="clique para ouvir o som da palavra"
+        android:textColor="@color/textColor"
+        android:text="@string/fragment_word_details_textViewDesc"
         android:textSize="14sp"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@id/buttonAboutSound"
@@ -101,24 +109,37 @@
             android:id="@+id/textViewMeanings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Meanings"
+            android:text="@string/fragment_word_details_textViewdesc_meanings"
             android:textSize="25sp"
-            android:textStyle="bold"
+            android:textStyle="italic"
+            android:textColor="@color/purple_100"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             />
 
         <TextView
-            android:id="@+id/textViewWordVerb"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Verb - say or shout ‘hello’ "
+            android:text="Verb:"
             android:textSize="18sp"
-            android:textColor="@color/teal_700"
+            android:textColor="@color/textColor"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/textViewMeanings"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewMeanings"
+            />
+
+        <TextView
+            android:id="@+id/textViewVerb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="say or shout ‘hello’ "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription"
             />
 
         <TextView
@@ -126,11 +147,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Example: "
+            android:textColor="@color/textColor"
             android:textSize="18sp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewWordVerb"
+            app:layout_constraintTop_toBottomOf="@id/textViewVerb"
             />
 
         <TextView
@@ -139,6 +161,8 @@
             android:layout_height="wrap_content"
             android:text="I pressed the phone button and helloed"
             android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
             app:layout_constraintTop_toBottomOf="@id/textViewExample"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
