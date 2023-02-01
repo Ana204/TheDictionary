@@ -1,14 +1,24 @@
 <resources>
     <string name="app_name">The Dictionary</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="arrow_back">arrow back</string>
-    <string name="fragment_word_list_textViewTitle">List of words</string>
-    <string name="fragment_word_details_textViewDesc">click to hear the sound of the word</string>
-    <string name="fragment_word_details_textViewdesc_meanings">Meanings</string>
+
+    //home
+    <string name="title_home">Home</string>
     <string name="fragment_home_text_view_desc_word">Discover the world of words</string>
     <string name="fragment_home_textView_title_favorite">See your favorite words</string>
     <string name="fragment_home_textView_desc_historic">Words you\'ve seen before</string>
+
+    //favorite
     <string name="fragment_favorites_textViewTitle">Favorite words list</string>
+
+    //details
+    <string name="fragment_word_details_textViewDesc">click to hear the sound of the word</string>
+    <string name="fragment_word_details_textViewdesc_meanings">Meanings</string>
+
+    //word list
+    <string name="fragment_word_list_textViewTitle">List of words</string>
+
+    //historic
+    <string name="fragment_historic_text_view_title">Historic list</string>
+
 </resources>
