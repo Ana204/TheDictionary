@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,11 +18,12 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/appToBar"
-            style="@style/Widget.Material3.Toolbar.OnSurface"
+            style="@style/Widget.Material3.Toolbar.Surface"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="match_parent"
             app:navigationIcon="@drawable/ic_view_headline"
             app:title="@string/app_name"
+            app:titleCentered="true"
             />
 
     </com.google.android.material.appbar.AppBarLayout>

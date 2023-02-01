@@ -11,7 +11,7 @@
                 android:icon="@drawable/ic_search"
                 android:title="search"
                 android:checkable="true"
-                android:background="@color/teal_200"
+                android:background="@color/purple_dark"
                 app:showAsAction="ifRoom"
                 app:itemTextColor="@color/white"
                 app:itemShapeFillColor="?attr/colorSecondaryContainer"
